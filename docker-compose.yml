@@ -1,0 +1,26 @@
+version: "3.5"
+services:
+  webpacker:
+    build: .
+    env_file:
+      - ./.env
+    command: ./bin/webpack-dev-server
+    volumes:
+      - .:/app
+      - bundle:/bundle
+    ports:
+      - '3037:3037'
+  web:
+    build: .
+    command: ./config/docker/start.sh
+    volumes:
+      - .:/app
+      - bundle:/bundle
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./.env
+
+volumes:
+  bundle:
+    driver: local
