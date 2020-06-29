@@ -17,3 +17,20 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import "controllers"
+
+
+document.addEventListener('stimulus-reflex:before', e => {
+  alert('before');
+});
+document.addEventListener('stimulus-reflex:success', e => {
+  alert('success');
+});
+document.addEventListener('stimulus-reflex:error', e => {
+  alert('error');
+});
+document.addEventListener('stimulus-reflex:halted', e => {
+  alert('halted');
+});
+document.addEventListener('stimulus-reflex:after', e => {
+  alert('after');
+});

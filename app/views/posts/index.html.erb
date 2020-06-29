@@ -1,5 +1,6 @@
-<a href="#"
-   data-reflex="click->CounterReflex#increment"
-   data-step="1"
-   data-count="<%= @count.to_i %>"
->Increment <%= @count.to_i %></a>
+<h1>Event stimulus-reflex:success will fire</h1>
+<a href="#" data-reflex="click->CounterReflex#increment">Works</a>
+
+<h1>Event stimulus-reflex:success and after will not fire for same elements</h1>
+<button data-reflex="click->CounterReflex#increment" data-example-id="1">Does not work(</button>
+<button data-reflex="click->CounterReflex#increment" data-example-id="1">Does not work(</a>
