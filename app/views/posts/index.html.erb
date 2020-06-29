@@ -1,8 +1,14 @@
 <div data-controller="counter">
-  <h1>Event stimulus-reflex:success will fire</h1>
+  <h1>Counter controller</h1>
+  <h2>Event stimulus-reflex:success will fire</h2>
   <a href="#" data-reflex="click->CounterReflex#increment">Works</a>
 
   <h1>Event stimulus-reflex:success and after will not fire for same elements</h1>
   <button data-reflex="click->CounterReflex#increment" data-example-id="1">Does not work(</button>
   <button data-reflex="click->CounterReflex#increment" data-example-id="1">Does not work(</button>
+</div>
+
+<div data-controller="post">
+  <h1>Post controller</h1>
+  <a href="#" data-reflex="click->PostReflex#update">click</a>
 </div>
